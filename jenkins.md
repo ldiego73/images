@@ -54,3 +54,8 @@ cat /var/jenkins_home/secrets/initialAdminPassword
 ```
 docker stop jenkins-container
 ```
+
+# Remover volume
+```
+docker volume rm jenkins_jenkins-data
+```

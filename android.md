@@ -13,3 +13,9 @@ chmod +x build.sh
 chmod +x run.sh
 ./run.sh
 ```
+
+## Acceso
+
+```
+docker exec -it android bash
+```

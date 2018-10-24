@@ -1,0 +1,13 @@
+version: '3'
+
+services:
+  jenkins:
+    image: gradle/build-cache-node
+    container_name: gradle-cache-container
+    user: root
+    ports:
+      - 8082:5071
+    volumes:
+      - gradle-cache-data:/data
+volumes:
+  gradle-cache-data:
