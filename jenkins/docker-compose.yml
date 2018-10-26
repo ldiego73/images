@@ -14,5 +14,6 @@ services:
       - /var/run/docker.sock:/var/run/docker.sock
     environment:
       JENKINS_HOST_HOME: jenkins-data
+      JAVA_OPTS: -Dorg.jenkinsci.plugins.docker.workflow.client.DockerClient.CLIENT_TIMEOUT=2500
 volumes:
   jenkins-data:

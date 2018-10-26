@@ -48,5 +48,5 @@ docker stop sonar-container
 ### Gradle
 
 ```
-./gradlew sonarqube -Dsonar.host.url=http://127.0.0.1:8081 -Dsonar.login=530f5a5202a5f7bdf5286a7d06eb2383bd73a56a -Dsonar.branch=develop
+./gradlew sonarqube -Dsonar.host.url=http://127.0.0.1:8081 -Dsonar.login=515c70afd6ba878576bdc6c0381f18bc9d9d8dce -Dsonar.branch=develop
 ```
