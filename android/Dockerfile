@@ -19,6 +19,10 @@ RUN mkdir "$ANDROID_HOME" .android && \
 
 # Aceptar Licensias
 RUN yes | $ANDROID_HOME/tools/bin/sdkmanager --licenses
+RUN yes | $ANDROID_HOME/tools/bin/sdkmanager "extras;android;m2repository" \
+    "extras;google;google_play_services" \
+    "extras;google;m2repository" \
+    "extras;google;instantapps"
 
 # Instalar Android Build Tools y Librerias
 RUN $ANDROID_HOME/tools/bin/sdkmanager --update
