@@ -52,4 +52,5 @@ docker volume rm influxdb_influxdb-data
 
 ```
 curl -G http://localhost:8086/query --data-urlencode "q=SHOW DATABASES"
+curl -XPOST http://localhost:8086/query --data-urlencode "q=CREATE DATABASE demo"
 ```
