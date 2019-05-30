@@ -1,0 +1,22 @@
+version: '3'
+
+services:
+  grafana:
+    image: grafana/grafana
+    container_name: grafana-container
+    user: '104'
+    ports:
+      - 80:3000
+    networks:
+      - grafananet
+    environment:
+      - GF_SECURITY_ADMIN_PASSWORD=@dmin123
+    volumes:
+      - grafana_data:/var/lib/grafana
+
+networks:
+  grafananet:
+    driver: bridge
+
+volumes:
+  grafana_data:
