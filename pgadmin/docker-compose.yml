@@ -1,0 +1,17 @@
+version: '3'
+
+services:
+  pgadmin:
+    image: dpage/pgadmin4
+    container_name: pgadmin-container
+    network_mode: host
+    ports:
+      - 80:80
+    environment:
+      - PGADMIN_DEFAULT_EMAIL=lfdiego7@gmail.com
+      - PGADMIN_DEFAULT_PASSWORD=admin
+    volumes:
+      - pgadmin_data:/var/lib/pgadmin
+
+volumes:
+  pgadmin_data:
