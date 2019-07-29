@@ -46,3 +46,9 @@ docker stop mysql-develop
 ```
 docker volume rm mysql-develop-data
 ```
+
+# Backup
+docker exec mysql-develop /usr/bin/mysqldump -u root --password=mysql DATABASE > backup.sql
+
+# Restore
+cat backup.sql | docker exec -i mysql-develop /usr/bin/mysql -u root --password=mysql DATABASE
