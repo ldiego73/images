@@ -17,7 +17,7 @@ docker-compose -p gradle-cache-container down
 Ejecuta el container en background
 
 ```
-docker-compose -p gradle-cache up -d
+docker-compose -p gradle-cache-container up -d
 ```
 
 ## Logs
