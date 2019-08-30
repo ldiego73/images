@@ -7,6 +7,8 @@ services:
     restart: always
     ports:
       - 27017:27017
+    networks:
+      - mongonet
     environment:
       - MONGO_INITDB_ROOT_USERNAME=root
       - MONGO_INITDB_ROOT_PASSWORD=mongo
@@ -17,8 +19,16 @@ services:
     restart: always
     ports:
       - 37017:3000
+    networks:
+      - mongonet
     volumes:
       - mongoclient-data:/data/db
+    depends_on:
+      - mongo
 
 volumes:
   mongoclient-data:
+
+networks:
+  mongonet:
+    driver: bridge
