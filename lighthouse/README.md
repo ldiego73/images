@@ -41,3 +41,9 @@ docker exec -it lhci-server bash
 ```
 docker stop lhci-server
 ```
+
+# LHCI_GITHUB_APP_TOKEN
+
+```
+K4CqIRNbH81TQ:6583245:TMuJof4vhQi
+```
